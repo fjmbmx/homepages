@@ -4,7 +4,7 @@ Pagina principal de real
 
 <br/>
 
-![Application](main.png?raw=true)
+![Application](homepages/homepage-real-qualitystate/main.png?raw=true)
 
 ## Comenzando 🚀
 
