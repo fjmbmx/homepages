@@ -4,7 +4,7 @@ Pagina principal de real
 
 <br/>
 
-![Application](main.png?raw=true)
+![Application](img/main.PNG?raw=true)
 
 ## Comenzando 🚀
 
