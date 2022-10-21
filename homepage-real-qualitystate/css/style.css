@@ -468,3 +468,7 @@
     margin-top:13px;
 }
  
+.whatsapp:active{
+    transform:scale(1.4);
+  }
+  

@@ -73,8 +73,9 @@
     <div class="container-fluid sticky-top bg-dark bg-light-radial shadow-sm px-5 pe-lg-0">
         <nav class="navbar navbar-expand-lg bg-dark bg-light-radial navbar-dark py-3 py-lg-0">
             <a href="index.html" class="navbar-brand">
-                <h2 class="m-0 display-6 text-uppercase text-white"><i
-                        class="bi bi-stack text-primary me-2"></i>TELEMETRY</h2>
+                <h2 class="m-0 display-6 text-uppercase text-white">
+                    <img  class=" mb-1" src="img/logotipo.png"  style="width: 40px; height: 40px;" alt="Image">
+                    </i>TELEMETRY</h2>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -260,26 +261,30 @@
                     frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
             <div class="col-lg-6">
+ 
+                <form  action="javascript:void(0);" id="form_saved_data_contact" method="POST">
+
                 <div class="contact-form bg-light p-4">
                     <div class="row g-3">
                         <div class="col-12 col-sm-6">
-                            <input type="text" class="form-control border-0" placeholder="Nombre" style="height: 55px;">
+                            <input type="text" class="form-control border-0" placeholder="Nombre"   id="prospect_name" style="height: 55px;">
                         </div>
                         <div class="col-12 col-sm-6">
-                            <input type="email" class="form-control border-0" placeholder="Correo eletrónico ó Whastapp"
+                            <input type="email" class="form-control border-0" placeholder="Correo eletrónico ó Whastapp" value="fjmb.mx@gmail.com" id="prospect_contact"
                                 style="height: 55px;">
                         </div>
                         <div class="col-12">
-                            <input type="text" class="form-control border-0" placeholder="Asunto" style="height: 55px;">
+                            <input type="text" class="form-control border-0" placeholder="Asunto"  id="prospect_subject" style="height: 55px;">
                         </div>
                         <div class="col-12">
-                            <textarea class="form-control border-0" rows="4" placeholder="Mensaje"></textarea>
+                            <textarea class="form-control border-0" rows="4" placeholder="Mensaje"   id="prospect_message"></textarea>
                         </div>
                         <div class="col-12">
-                            <button class="btn btn-primary w-100 py-3" type="submit">Enviar</button>
+                            <button class="btn btn-primary w-100 py-3" type="submit" id="btnSubmit">Enviar</button>
                         </div>
                     </div>
                 </div>
+                </form>
             </div>
         </div>
     </div>
@@ -400,6 +405,11 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.js"></script>
+
+    <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">
+
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
@@ -408,10 +418,12 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script src="js/whatsapp.js"></script>
+    <script src="js/send-email.js"></script>
 
 </body>
 
