@@ -1,0 +1,473 @@
+html.html-email-chronostart,
+body.body-email-chronostart {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    background: #f1f1f1;
+}
+
+/* What it does: Stops email clients resizing small text. */
+* {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* What it does: Centers email on Android 4.4 */
+body.body-email-chronostart div[style*="margin: 16px 0"] {
+    margin: 0 !important;
+}
+
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+body.body-email-chronostart table,
+body.body-email-chronostart td {
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+}
+
+/* What it does: Fixes webkit padding issue. */
+body.body-email-chronostart table {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    margin: 0 auto !important;
+}
+
+/* What it does: Uses a better rendering method when resizing images in IE. */
+body.body-email-chronostart img {
+    -ms-interpolation-mode: bicubic;
+}
+
+/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+body.body-email-chronostart a {
+    text-decoration: none;
+    color: #042D52 !important;
+}
+
+/* What it does: A work-around for email clients meddling in triggered links. */
+*[x-apple-data-detectors],
+/* iOS */
+body.body-email-chronostart .unstyle-auto-detected-links *,
+body.body-email-chronostart .aBn {
+    border-bottom: 0 !important;
+    cursor: default !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+
+/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+body.body-email-chronostart .a6S {
+    display: none !important;
+    opacity: 0.01 !important;
+}
+
+/* What it does: Prevents Gmail from changing the text color in conversation threads. */
+body.body-email-chronostart .im {
+    /* color: inherit !important; */
+    color: #444444 !important;
+}
+
+/* If the above doesn't work, add a .g-img class to any image in question. */
+body.body-email-chronostart img.g-img+div {
+    display: none !important;
+}
+
+/* body.body-email-chronostart table.table-event-main-img {
+    margin: 0 2.4em !important;
+} */
+body.body-email-chronostart table.table-event-main-img {
+    width: 100%;
+}
+body.body-email-chronostart table.table-event-main-img tr td {
+    padding: 0 2.4em !important;
+}
+body.body-email-chronostart table.table-event-main-img img {
+    width: 100%;
+}
+
+body.body-email-chronostart table.table-event-main tr td table tr th a {
+    line-height: initial !important;
+}
+/* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+/* Create one of these media queries for each additional viewport size you'd like to fix */
+
+/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+    u~div .email-container {
+        min-width: 320px !important;
+    }
+    table.table-event-main tr td {
+        width: 100% !important;
+        display: block;
+        text-align: center !important;
+        padding: 0 !important;
+    }
+    body.body-email-chronostart .email-section {
+        padding: 1em !important;
+    }
+    body.body-email-chronostart table.table-event-main-img tr td {
+        padding: 0 1em !important;
+    }
+    table.table-events-seconds tr td.text-services h3,
+    table.table-events-seconds tr td.text-services p,
+    table.table-events-seconds tr td.text-services span {
+        font-size: 10px !important;
+    }
+    table.table-events-seconds-three tr td.text-services h3,
+    table.table-events-seconds-three tr td.text-services p,
+    table.table-events-seconds-three tr td.text-services span {
+        font-size: 8px !important;
+    }
+    td.bg_black.footer table tr td {
+        display: block;
+        width: 100% !important;
+    }
+    body.body-email-chronostart table.table-events-seconds tr td a > img {
+        height: 100px !important;
+    }
+    body.body-email-chronostart table.table-events-seconds-three tr td a > img {
+        height: 80px !important;
+    }
+}
+
+/* iPhone 6, 6S, 7, 8, and X */
+@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+    u~div .email-container {
+        min-width: 375px !important;
+    }
+    table.table-event-main tr td {
+        width: 100% !important;
+        display: block;
+        text-align: center !important;
+        padding: 0 !important;
+    }
+    body.body-email-chronostart .email-section {
+        padding: 1em !important;
+    }
+    body.body-email-chronostart table.table-event-main-img tr td {
+        padding: 0 1em !important;
+    }
+    table.table-events-seconds tr td.text-services h3,
+    table.table-events-seconds tr td.text-services p,
+    table.table-events-seconds tr td.text-services span {
+        font-size: 10px !important;
+    }
+    table.table-events-seconds-three tr td.text-services h3,
+    table.table-events-seconds-three tr td.text-services p,
+    table.table-events-seconds-three tr td.text-services span {
+        font-size: 8px !important;
+    }
+    td.bg_black.footer table tr td {
+        display: block;
+        width: 100% !important;
+    }
+    body.body-email-chronostart table.table-events-seconds tr td a > img {
+        height: 100px !important;
+    }
+    body.body-email-chronostart table.table-events-seconds-three tr td a > img {
+        height: 80px !important;
+    }
+}
+
+@media only screen and (min-device-width: 413px) and (max-device-width: 489px) {
+    table.table-event-main tr td {
+        width: 100% !important;
+        display: block;
+        text-align: center !important;
+        padding: 0 !important;
+    }
+    table.table-event-main tr td a.btn-primary {
+        margin-top: 10px;
+    }
+    table.table-events-seconds tr td.text-services h3,
+    table.table-events-seconds tr td.text-services p,
+    table.table-events-seconds tr td.text-services span,
+    table.table-events-seconds-three tr td.text-services h3,
+    table.table-events-seconds-three tr td.text-services p,
+    table.table-events-seconds-three tr td.text-services span {
+        font-size: 10px !important;
+    }
+    table.table-events-seconds-three tr td.text-services a.btn-primary {
+        padding: 5px 5px !important;
+    }
+    td.bg_black.footer table tr td {
+        display: block;
+        width: 100% !important;
+    }
+    body.body-email-chronostart table.table-events-seconds tr td a > img {
+        height: 140px !important;
+    }
+    body.body-email-chronostart table.table-events-seconds-three tr td a > img {
+        height: 100px !important;
+    }
+}
+
+/* iPhone 6+, 7+, and 8+ */
+@media only screen and (min-device-width: 414px) {
+    u~div .email-container {
+        min-width: 414px !important;
+    }
+}
+
+body.body-email-chronostart .primary {
+    background: #448ef6;
+}
+
+body.body-email-chronostart .bg_white {
+    background: #ffffff;
+}
+
+body.body-email-chronostart .bg_light {
+    background: #fafafa;
+}
+
+body.body-email-chronostart .bg_black {
+    background: #000000;
+}
+
+body.body-email-chronostart .bg_dark {
+    background: rgba(0, 0, 0, .8);
+}
+
+body.body-email-chronostart .email-section {
+    padding: 2.5em;
+}
+
+/*BUTTON*/
+body.body-email-chronostart .btn {
+    padding: 5px 15px;
+    display: inline-block;
+}
+
+body.body-email-chronostart .btn.btn-primary {
+    border-radius: 30px;
+    background: #042D52;
+    color: #ffffff !important;
+}
+
+body.body-email-chronostart .btn.btn-white {
+    border-radius: 30px;
+    background: #ffffff;
+    color: #000000;
+}
+
+body.body-email-chronostart .btn.btn-white-outline {
+    border-radius: 30px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+body.body-email-chronostart h1,
+body.body-email-chronostart h2,
+body.body-email-chronostart h3,
+body.body-email-chronostart h4,
+body.body-email-chronostart h5,
+body.body-email-chronostart h6 {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    color: #000000;
+    margin-top: 0;
+    font-weight: 400;
+}
+
+body.body-email-chronostart {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(0, 0, 0, .4);
+}
+
+body.body-email-chronostart a {
+    color: #448ef6;
+}
+
+body.body-email-chronostart table {}
+
+/*LOGO*/
+
+body.body-email-chronostart .logo h1 {
+    margin: 0;
+}
+
+body.body-email-chronostart .logo h1 a {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+body.body-email-chronostart .navigation {
+    padding: 0;
+    margin: 0;
+}
+
+body.body-email-chronostart .navigation li {
+    list-style: none;
+    display: inline-block;
+    ;
+    margin-left: 5px;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+body.body-email-chronostart .navigation li a {
+    color: rgba(0, 0, 0, .4);
+}
+
+/*HERO*/
+body.body-email-chronostart .hero {
+    position: relative;
+    z-index: 0;
+}
+
+body.body-email-chronostart .hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    width: 100%;
+    background: #000000;
+    z-index: -1;
+    opacity: .3;
+}
+
+body.body-email-chronostart .hero .text {
+    color: rgba(255, 255, 255, .9);
+}
+
+body.body-email-chronostart .hero .text h2 {
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 0;
+    font-weight: 300;
+    line-height: 1;
+}
+
+body.body-email-chronostart .hero .text h2 span {
+    font-weight: 600;
+    color: #448ef6;
+}
+
+
+/*HEADING SECTION*/
+body.body-email-chronostart .heading-section {}
+
+body.body-email-chronostart .heading-section h2 {
+    color: #000000;
+    font-size: 28px;
+    margin-top: 0;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+body.body-email-chronostart .heading-section .subheading {
+    margin-bottom: 20px !important;
+    display: inline-block;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, .4);
+    position: relative;
+}
+
+body.body-email-chronostart .heading-section .subheading::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #448ef6;
+    margin: 0 auto;
+}
+
+body.body-email-chronostart .heading-section-white {
+    color: rgba(255, 255, 255, .8);
+}
+
+body.body-email-chronostart .heading-section-white h2 {
+    /* font-family: */
+        line-height: 1;
+    padding-bottom: 0;
+}
+
+body.body-email-chronostart .heading-section-white h2 {
+    color: #ffffff;
+}
+
+body.body-email-chronostart .heading-section-white .subheading {
+    margin-bottom: 0;
+    display: inline-block;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, .4);
+}
+
+
+/*BLOG*/
+body.body-email-chronostart .text-services .meta {
+    /* text-transform: uppercase; */
+    font-size: 14px;
+    margin-bottom: 0;
+    color: gray;
+    margin: 0;
+}
+body.body-email-chronostart .text-services .place {
+    /* text-transform: uppercase; */
+    font-size: 14px;
+    margin-bottom: 0;
+    color: gray;
+    margin: 0;
+}
+
+/*FOOTER*/
+
+body.body-email-chronostart .footer {
+    color: rgba(255, 255, 255, .5);
+
+}
+
+body.body-email-chronostart .footer .heading {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+body.body-email-chronostart .footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+body.body-email-chronostart .footer ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+body.body-email-chronostart .footer ul li a {
+    color: rgba(255, 255, 255, 1);
+}
+
+body.body-email-chronostart td.email-section table tr td table tr td {
+    /* text-align: center !important; */
+}
+
+@media screen and (max-width: 500px) {}
+
+.body-email-chronostart table.table-events-seconds tr td a img {
+    height: 220px !important;
+}
+.body-email-chronostart table.table-events-seconds-three tr td a img {
+    height: 160px !important;
+}
