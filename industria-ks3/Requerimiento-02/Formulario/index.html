@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>MAXCOM</title>
+</head>
+<body class="body-maxcom">
+
+    <section class="maxcom">
+
+        <article class="maxcom-logo">
+            <img src="img/logotipo-maxcom.png" alt="logotipo maxcom" />
+        </article>
+
+        <hr class="separator">
+
+        <form class="maxcom-form" action="">
+
+            <div class="maxcom-form_title">
+                <h4 class="title">
+                    Información personal
+                </h4>
+            </div>
+
+            <div class="maxcom-form_data">
+
+                <div>
+                    <label for="nombre">
+                        <span class="required-label">*</span>
+                        Nombre:
+                    </label>
+                    <input type="text" id="nombre" class="control-form" />
+                </div>
+                <div>
+                    <label for="apaterno">
+                        <span class="required-label">*</span>
+                        Apellido paterno:
+                    </label>
+                    <input type="text" id="apaterno" class="control-form" />
+                </div>
+                <div>
+                    <label for="amaterno">
+                        <span class="required-label">*</span>
+                        Apellido materno:
+                    </label>
+                    <input type="text" id="amaterno" class="control-form" />
+                </div>
+
+            </div>
+
+            <div class="maxcom-form_data">
+
+                <div>
+                    <label for="empresa">
+                        <span class="required-label">*</span>
+                        Empresa:
+                    </label>
+                    <input type="text" id="empresa" class="control-form" />
+                </div>
+                <div>
+                    <label for="ntelefono">
+                        <span class="required-label">*</span>
+                        Número de teléfono (10 dígitos):
+                    </label>
+                    <input type="text" id="ntelefono" class="control-form" maxlength="10" />
+                </div>
+                <div>
+                    <label for="ncel">
+                        <span class="required-label">*</span>
+                        Número de celular (10 dígitos):
+                    </label>
+                    <input type="text" id="ncel" class="control-form" maxlength="10" />
+                </div>
+
+            </div>
+
+            <div class="maxcom-form_data">
+
+                <div>
+                    <label for="pais">
+                        <span class="required-label">*</span>
+                        País:
+                    </label>
+                    <select name="pais" id="pais" class="control-form">
+                        <option value="">-- Seleccione --</option>
+                        <option value="mx">México</option>
+                        <option value="eu">Estados Unidos</option>
+                        <option value="es">España</option>
+                        <option value="br">Brazil</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="ciudad">
+                        <span class="required-label">*</span>
+                        Ciudad:
+                    </label>
+                    <input type="text" id="ciudad" class="control-form" />
+                </div>
+                <div>
+                    <label for="cpostal">
+                        <span class="required-label">*</span>
+                        Código postal:
+                    </label>
+                    <input type="text" id="cpostal" class="control-form" />
+                </div>
+
+            </div>
+
+            <div class="maxcom-form_title">
+                <h4 class="title">
+                    Servicios de interés
+                </h4>
+            </div>
+
+            <div class="maxcom-form_checkbox">
+
+                <fieldset>
+                    <legend>DATOS</legend>
+
+                    <div>
+                        <label for="idedicado" class="check-custom">
+                            Internet dedicado
+                            <input type="checkbox" id="idedicado" checked="checked" />
+                            <span class="checkmark"></span>
+                        </label>
+    
+                        <label for="l2l" class="check-custom">
+                            L2L
+                            <input type="checkbox" id="l2l" />
+                            <span class="checkmark"></span>
+                        </label>
+    
+                        <label for="datas" class="check-custom">
+                            MPLS
+                            <input type="checkbox" id="datas" />
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>SOLUCIONES ADMINISTRADAS</legend>
+
+                    <div>
+                        <label for="wifi" class="check-custom">
+                            WiFi
+                            <input type="checkbox" id="wifi" />
+                            <span class="checkmark"></span>
+                        </label>
+                        
+                        <label for="seguridad" class="check-custom">
+                            Seguridad
+                            <input type="checkbox" id="seguridad" />
+                            <span class="checkmark"></span>
+                        </label>
+                        
+                        <label for="sms" class="check-custom">
+                            SMS
+                            <input type="checkbox" id="sms" />
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    
+                </fieldset>
+            </div>
+
+            <div class="maxcom-form_checkbox">
+                <fieldset>
+                    <legend>VOZ</legend>
+
+                    <div>
+                        <label for="01800" class="check-custom">
+                            01800
+                            <input type="checkbox" id="01800" />
+                            <span class="checkmark"></span>
+                        </label>
+                        
+                        <label for="tsip" class="check-custom">
+                            Troncal SIP
+                            <input type="checkbox" id="tsip" />
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    
+                </fieldset>
+                
+                <fieldset>
+                    <legend>INNOVACIÓN</legend>
+
+                    <div>
+                        <label for="cpbx" class="check-custom">
+                            Cloud PBX
+                            <input type="checkbox" id="cpbx" />
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+
+                </fieldset>
+
+            </div>
+
+            <div class="maxcom-form_data">
+
+                <div>
+                    <label for="ointeres">
+                        Otro interés (Especifique):
+                    </label>
+                    <input type="text" id="ointeres" class="control-form" />
+                </div>
+
+            </div>
+
+            <div class="maxcom-form_btn">
+                <button type="submit">
+                    &#x2713; Agregar datos
+                </button>
+            </div>
+
+        </form>
+
+    </section>
+
+</body>
+</html>

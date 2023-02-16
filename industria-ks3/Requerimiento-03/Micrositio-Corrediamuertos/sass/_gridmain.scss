@@ -1,0 +1,23 @@
+html {
+    box-sizing: border-box;
+    // -ms-overflow-style: scrollbar;
+    font-size: 14px;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  @import "utilities/functions";
+  @import "utilities/variables";
+  
+  @import "utilities/breakpoints";
+  @import "utilities/gridframework";
+  @import "utilities/grid";
+
+  @import "utilities/display";
+  @import "utilities/flex";
+  @import "utilities/spacing";
+  
