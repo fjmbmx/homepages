@@ -32,7 +32,7 @@ $(document).ready(function () {
             }),
             type: "POST",
             dataType: 'json',
-            url: "http://localhost/email/enviocorreo.php",
+            url: "core/email/enviocorreo.php",
 
             success: function (response) {
                 console.log(response)
