@@ -62,7 +62,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == "GET" && strpos($uri, '/v1.0/history/track')) {
-	$idClient = trim($_GET['id']);
 	$idRecipient = trim($_GET['recipient']);
 	# Obtener base de datos
 	$bd = obtenerBD();
