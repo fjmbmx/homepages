@@ -28,24 +28,18 @@ function sendemailAlert(
 	 * El segundo parámetro opcional para esta función es el nombre que se mostrará como el remitente
 	 * en lugar de la dirección de correo electrónico en sí.
 	**/
-    $mail->setFrom("notifications@tele-metry.net", $client_name);
+    $mail->setFrom("notifications@goldenluxurydev", $client_name);
 	/**Introduzca la dirección de la que debe responder.
 	 * El segundo parámetro opcional para esta función es el nombre que se mostrará para responder
 	**/
-	 $mail->addReplyTo("notifications@tele-metry.net"); 
+	 $mail->addReplyTo("ventas@goldenluxurydev.com"); 
 
-	// $sql="select email from emails ";
-	// foreach ($dbo->query($sql) as $row) {
-	// 	$email->AddAddress($row[email]);
-	// }
-
+		$mail->AddCC("ventas@goldenluxurydev.com"); // Agregar quien recibe el e-mail enviado
 
 	foreach ($list_mail_recipients as $email => $name) {
-		$mail->AddCC($email, $name); // Agregar quien recibe el e-mail enviado
-	}
-
-	// Quien lo recibe
-	$mail->addAddress('support@tele-metry.net', 'Support');   // Agregar quien recibe el e-mail enviado
+	    
+		$mail->addAddress($email, $name); // Agregar quien recibe el e-mail enviado
+	} 
 
 	// Contenido
 
@@ -102,29 +96,24 @@ function sendemailContact(
 	$mail->Port = 465;							// Puerto TCP  para conectarse  
 
 
+	
 	/**Introduzca la dirección de la que debe aparecer el correo electrónico.
 	 * Puede utilizar cualquier dirección que el servidor SMTP acepte como válida. 
 	 * El segundo parámetro opcional para esta función es el nombre que se mostrará como el remitente
 	 * en lugar de la dirección de correo electrónico en sí.
 	**/
-    $mail->setFrom("support@tele-metry.net", "Nuevo Prospecto");
+    $mail->setFrom("notifications@goldenluxurydev", $prospect_name);
 	/**Introduzca la dirección de la que debe responder.
 	 * El segundo parámetro opcional para esta función es el nombre que se mostrará para responder
 	**/
-	 $mail->addReplyTo("support@tele-metry.net"); 
+	 $mail->addReplyTo("ventas@goldenluxurydev.com"); 
 
-	// $sql="select email from emails ";
-	// foreach ($dbo->query($sql) as $row) {
-	// 	$email->AddAddress($row[email]);
-	// }
+		$mail->AddCC("ventas@goldenluxurydev.com"); // Agregar quien recibe el e-mail enviado
 
 	foreach ($list_mail_recipients as $email => $name) {
-		$mail->AddCC($email, $name); // Agregar quien recibe el e-mail enviado
-	}
-
-	// Quien lo recibe
-	$mail->addAddress('support@tele-metry.net', 'Support');   // Agregar quien recibe el e-mail enviado
-	//$mail->AddAddress('test-w7jmo4q07@srv1.mail-tester.com','Test');
+	    
+		$mail->addAddress($email, $name); // Agregar quien recibe el e-mail enviado
+	} 
 
 	$mail->addCustomHeader('MIME-Version: 1.0');
  	

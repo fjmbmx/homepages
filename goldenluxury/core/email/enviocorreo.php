@@ -12,8 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 	$data = json_decode(file_get_contents('php://input'), true);
 	/*Configuracion de variables para enviar el correo*/
-	$server_mail_user = "notifications@goldenluxurydev.com"; //Correo electronico saliente ejemplo: tucorreo@gmail.com
-	$server_mail_password = "4dm1n-Mb3"; //Tu contraseña de gmail
+	$server_mail_user = "ventas@goldenluxurydev.com"; //Correo electronico saliente ejemplo: tucorreo@gmail.com
+	$server_mail_password = "4dm1n-Mb3"; //Tu contrase単a de gmail
 	$template = "index.html"; //Ruta de la plantilla HTML para enviar nuestro mensaje
 
 	/*Inicio captura de datos enviados por $_POST para enviar el correo */
