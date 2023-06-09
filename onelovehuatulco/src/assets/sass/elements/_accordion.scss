@@ -1,0 +1,106 @@
+/**
+ * Accordion
+ */
+
+.tm-accordion {
+
+    .card {
+        border: none;
+        background: transparent;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    .card-header {
+        padding: 0;
+        background: transparent;
+        border: 0;
+
+        button {
+            height: auto;
+            display: block;
+            width: 100%;
+            text-align: left;
+            line-height: 28px;
+            text-decoration: none !important;
+            border: 0;
+            position: relative;
+            white-space: inherit;
+            font-size: 18px;
+            font-weight: 600;
+            font-family: $ff-heading;
+            color: $color-theme;
+            padding: 0;
+            padding-left: 40px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 7px;
+                font-size: 18px;
+                height: 15px;
+                width: 15px;
+                border: 1px solid $color-theme;
+                border-radius: 100px;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 3px;
+                top: 10px;
+                font-size: 18px;
+                height: 9px;
+                width: 9px;
+                background: #34a5b3;
+                border-radius: 100px;
+                visibility: hidden;
+                opacity: 0;
+                transition: $transition;
+            }
+
+            &.collapsed {
+
+                &::after {
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            }
+
+            &:not(.collapsed) {
+                color: $color-theme;
+
+                &::after {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .card-body {
+        padding: 0;
+        padding-left: 40px;
+        padding-top: 15px;
+
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        .card-header {
+            button {
+                font-size: 16px;
+                padding-left: 30px;
+            }
+        }
+
+        .card-body {
+            padding-left: 30px;
+        }
+    }
+}

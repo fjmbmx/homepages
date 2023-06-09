@@ -1,0 +1,129 @@
+/**
+ * Testimonial
+ */
+
+.tm-testimonial {
+    box-shadow: $shadow;
+    padding: 35px 35px 20px 35px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &::after {
+        content: url(../../assets/images/icons/icon-testimonial-quote.png);
+        position: absolute;
+        left: auto;
+        right: -5px;
+        bottom: -25px;
+        z-index: -1;
+    }
+
+    &-slider {
+
+        .tm-testimonial {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .slick-list {
+            margin-top: -15px;
+            margin-bottom: -15px;
+        }
+    }
+
+    &>p {
+        font-size: 18px;
+        line-height: 27px;
+
+        &::before {
+            content: "\" ";
+            color: $color-theme;
+            font-style: italic;
+        }
+
+        &::after {
+            content: " \"";
+            color: $color-theme;
+            font-style: italic;
+        }
+    }
+
+    &-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+
+    &-author {
+        display: flex;
+        align-items: center;
+    }
+
+    &-authorcontent {
+        h6 {
+            margin-bottom: 0;
+        }
+
+        p {
+            margin-bottom: 0;
+            color: $color-theme;
+        }
+    }
+
+    &-image {
+        height: 65px;
+        flex: 0 0 65px;
+        max-width: 65px;
+        border-radius: 100px;
+        overflow: hidden;
+        margin-right: 10px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-ratings {
+        span {
+            font-size: 24px;
+            color: #fdc716;
+        }
+    }
+
+    @media #{$layout-notebook} {
+        padding: 35px 30px 20px 30px;
+    }
+
+    @media #{$layout-tablet} {
+        padding: 35px 30px 20px 30px;
+
+        &>p {
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        padding: 35px 30px 20px 30px;
+
+        &>p {
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+
+    @media #{$layout-mobile-sm} {
+        padding: 35px 20px 20px 20px;
+
+        &-top {
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        &-ratings {
+            flex: 0 0 100%;
+            margin-top: 20px;
+        }
+    }
+}

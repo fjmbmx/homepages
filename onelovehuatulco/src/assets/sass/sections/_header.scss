@@ -1,0 +1,379 @@
+/**
+ * Header
+ */
+
+.tm-header {
+    box-shadow: 0 0 5px rgba(#000000, 0.15);
+    position: relative;
+    z-index: 99;
+
+    &-toparea {
+        border-bottom: 1px solid $color-border;
+        background: $color-dark;
+        color: #ffffff;
+    }
+
+    &-info {
+        padding-left: 0;
+        margin-bottom: 0;
+        font-size: 0;
+
+        li {
+            display: inline-block;
+            margin-right: 30px;
+            list-style: none;
+            font-size: 15px;
+            line-height: 26px;
+            color: #ffffff;
+            vertical-align: middle;
+
+            i {
+                margin-right: 8px;
+                font-size: 18px;
+                line-height: 1;
+                vertical-align: text-bottom;
+            }
+
+            a {
+                display: inline-block;
+                color: #ffffff;
+                vertical-align: middle;
+
+                &:hover {
+                    color: $color-theme;
+                }
+            }
+        }
+    }
+
+    &-icons {
+        padding-left: 0;
+        margin-bottom: 0;
+        text-align: right;
+        padding: 10px 0;
+
+        li {
+            list-style: none;
+            display: inline-block;
+            padding: 0 12px;
+
+            &:not(:last-child) {
+                border-right: 1px solid #555555;
+            }
+
+            a,
+            button {
+                display: inline-block;
+                padding: 0;
+                border: 0;
+                font-size: 15px;
+                line-height: 26px;
+                color: #ffffff;
+                height: auto;
+                padding: 3px;
+
+                &:hover {
+                    color: $color-theme;
+                }
+            }
+        }
+    }
+
+    &-inner {
+        padding: 11px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #ffffff;
+        position: relative;
+
+        .tm-button {
+            padding: 0 15px;
+        }
+    }
+
+    &-logo {
+        margin-right: 20px;
+
+        img {
+            max-height: 100%;
+        }
+    }
+
+    &-nav {
+        flex-grow: 1;
+        text-align: right;
+    }
+
+    &-utils {
+        margin-left: 30px;
+        padding-left: 0;
+        margin-bottom: 0;
+
+        li {
+            list-style: none;
+            display: inline-block;
+            color: $color-heading;
+            margin: 0 5px;
+            font-size: 18px;
+            position: inherit;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &>a,
+            &>button {
+                color: $color-heading;
+                padding: 0;
+                height: auto;
+                border: 0;
+
+                &:hover {
+                    color: $color-theme;
+                }
+            }
+        }
+    }
+
+    &-searchtrigger {
+        display: none;
+    }
+
+    &-searchform {
+        max-width: 200px;
+        position: relative;
+
+        input:not([type="submit"]) {
+            height: 35px;
+            line-height: 35px;
+            padding: 0 45px 0 15px;
+            border: 1px solid $color-secondary;
+            border-radius: 100px;
+            font-size: 15px;
+        }
+
+        button,
+        input[type="submit"] {
+            position: absolute;
+            left: auto;
+            top: 0;
+            right: 0;
+            height: 35px;
+            line-height: 37px;
+            background: $color-secondary;
+            border: 0;
+            border-radius: 0 100px 100px 0;
+            color: #ffffff;
+            width: 40px;
+            text-align: center;
+        }
+    }
+
+    &-bottomarea {
+        background: #ffffff;
+    }
+
+    &-bottominside {
+        position: relative;
+    }
+
+    @media #{$layout-tablet} {
+
+        &-logo {
+            height: 50px;
+        }
+
+        &-info {
+            text-align: center;
+            border-bottom: 1px solid #555555;
+            padding: 10px 0;
+
+            li {
+                margin: 0 15px;
+            }
+        }
+
+        &-icons {
+            text-align: center;
+        }
+
+        &-utils {
+            margin-right: 40px;
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        &-logo {
+            height: 50px;
+        }
+
+        &-info {
+            text-align: center;
+            border-bottom: 1px solid #555555;
+            padding: 10px 0;
+
+            li {
+                margin: 0 15px;
+            }
+        }
+
+        &-icons {
+            text-align: center;
+        }
+
+        &-utils {
+            margin-right: 40px;
+        }
+    }
+
+    @media #{$layout-mobile-sm} {
+        &-searchtrigger {
+            display: block;
+        }
+
+        &-searchform {
+            position: absolute;
+            left: auto;
+            right: 0;
+            top: 100%;
+            max-width: initial;
+            width: 100%;
+            background: #ffffff;
+            padding: 15px;
+            box-shadow: $shadow;
+
+            button,
+            input[type="submit"] {
+                top: 15px;
+                right: 15px;
+            }
+        }
+    }
+}
+
+.tm-header-sticky {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    &.is-sticky {
+        .tm-header-bottomarea {
+            position: fixed;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 0;
+            animation: slideInDown 0.5s ease-in-out 0s 1 both;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+    }
+}
+
+
+
+/* Mobilemenu */
+.tm-mobilenav {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+
+    .mean-bar {
+        background: #0c1923;
+        padding: 0;
+        min-height: 0;
+        z-index: 99;
+    }
+
+    a.meanmenu-reveal {
+        margin-top: -50px;
+        text-indent: 0;
+        padding: 0;
+        text-align: center;
+        width: 25px;
+        height: 25px;
+        line-height: 20px;
+        color: #3c424f;
+        font-size: 24px !important;
+    }
+
+    .mean-nav {
+        margin-top: 0;
+        background: $color-theme;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        box-shadow: $shadow;
+
+        &>ul {
+            max-height: 201px;
+            overflow-y: auto;
+
+            li {
+                a {
+                    padding: 7px 5%;
+                    border-top: 1px solid rgba(255, 255, 255, .2);
+                    font-size: 14px;
+                    font-family: $ff-heading;
+                    text-transform: inherit;
+
+                    &:hover {
+                        background: #ffffff;
+                        color: $color-theme;
+                    }
+
+                    &.mean-expand {
+                        padding: 0 6px !important;
+                        height: 41px;
+                        line-height: 41px;
+                        background: rgba($color-theme, 0.7);
+                        color: #ffffff;
+                        margin-top: 0;
+
+                        &:hover {
+                            background: rgba(255, 255, 255, .1);
+                        }
+                    }
+                }
+
+                li {
+                    a {
+                        opacity: 1;
+                    }
+                }
+
+                ul {
+                    li {
+                        a {
+                            padding: 7px 10%;
+                        }
+                    }
+
+                    ul {
+                        li {
+                            a {
+                                padding: 7px 15%;
+                            }
+                        }
+
+                        ul {
+                            li {
+                                a {
+                                    padding: 7px 20%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

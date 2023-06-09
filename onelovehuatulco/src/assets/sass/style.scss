@@ -1,0 +1,113 @@
+/*
+ * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ *
+ * Template Name: Malic - Fishing & Hunting Club HTML Template  
+ * Template URI: https://thememarch.com/demo/html/malic/
+ * Description: Malic is a fully responsive fishing & hunting club HTML template which comes with the unique and clean design. It built with latest bootstrap 4 framework which makes the template fully customizable. It has also e-commerce support. E-commerce pages are included on this template.
+ * Author: Thememarch
+ * Author URI: https://thememarch.com
+ * Version: 1.5
+ *
+ * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ */
+
+
+/*
+=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>
+    TABLE OF CONTENTS
+=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>
+
+    01. Reset 
+    02. Animations 
+    03. Typography 
+    04. Utilities 
+    
+    05. Button
+    06. Title
+    07. Feature
+    08. Form
+    09. Selectbox
+    10. Tabgroup
+    11. Accordion
+    12. Pagination
+
+    13. Header
+    14. Navigation
+    15. Heroslider
+    16. About
+    17. Video Area
+    18. Service
+    19. Product
+    20. Offer
+    21. Testimonial
+    22. Newsletter
+    23. Team Member
+    24. Pricebox
+    25. Portfolio
+    26. Call to action
+    27. Blog
+    28. Contact
+    29. Brand Logo
+    30. Shop
+    31. Breadcrumb
+    32. Widgets
+    33. Comment
+    34. Footer
+
+    35. Product Details
+    36. Shopping Cart
+    37. Checkout
+    38. My Account
+
+=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>
+    END TABLE OF CONTENTS
+=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>
+*/
+
+
+
+@import 'variables';
+@import 'mixins';
+
+@import 'basic/reset';
+@import 'basic/animations';
+@import 'basic/typography';
+@import 'basic/utilities';
+
+@import 'elements/button';
+@import 'elements/titles';
+@import 'elements/feature';
+@import 'elements/form';
+@import 'elements/selectbox';
+@import 'elements/tab';
+@import 'elements/accordion';
+@import 'elements/pagination';
+
+@import 'sections/header';
+@import 'sections/nav';
+@import 'sections/heroslider';
+@import 'sections/about';
+@import 'sections/video';
+@import 'sections/service';
+@import 'sections/product';
+@import 'sections/offer';
+@import 'sections/testimonial';
+@import 'sections/newsletter';
+@import 'sections/team';
+@import 'sections/pricebox';
+@import 'sections/portfolio';
+@import 'sections/calltoaction';
+@import 'sections/blog';
+@import 'sections/contact';
+@import 'sections/brandlogo';
+@import 'sections/shop';
+@import 'sections/breadcrumb';
+@import 'sections/widgets';
+@import 'sections/comment';
+@import 'sections/footer';
+
+
+@import 'pages/product-details';
+@import 'pages/cart';
+@import 'pages/checkout';
+@import 'pages/account';

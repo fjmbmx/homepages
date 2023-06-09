@@ -1,0 +1,157 @@
+/**
+ * Product
+ */
+
+.tm-product {
+    &-topside {
+        position: relative;
+        overflow: hidden;
+        box-shadow: $shadow;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background: rgba($color-theme, 0.8);
+            transition: $transition;
+            visibility: hidden;
+            opacity: 0;
+            z-index: 1;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-actions {
+        padding-left: 0;
+        margin-bottom: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: auto;
+        bottom: 0;
+        width: 100%;
+        background: transparent;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 0;
+        z-index: 2;
+
+        li {
+            list-style: none;
+            display: inline-block;
+            font-size: 18px;
+            vertical-align: middle;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: $transition;
+            margin: 0 4px;
+
+            a,
+            button {
+                display: inline-block;
+                height: 35px;
+                min-width: 35px;
+                padding: 0;
+                line-height: 35px;
+                border: 1px solid #ffffff;
+                background: $color-secondary;
+                outline: none;
+                text-align: center;
+                border-radius: 100px;
+                color: #ffffff;
+                font-size: 15px;
+                vertical-align: middle;
+
+                i {
+                    font-size: 18px;
+                    line-height: 37px;
+                }
+            }
+
+            &:first-child {
+
+                a,
+                button {
+                    padding: 0 15px;
+                }
+            }
+        }
+    }
+
+    &-bottomside {
+        padding-top: 25px;
+
+        h6 {
+            margin-bottom: 8px;
+            font-weight: 700;
+
+            a {
+                color: $color-heading;
+
+                &:hover {
+                    color: $color-theme;
+                }
+            }
+        }
+
+        .tm-ratingbox {
+            margin-top: 5px;
+        }
+    }
+
+    &-price {
+        margin-top: 10px;
+        color: $color-theme;
+        font-weight: 600;
+        margin-top: 5px;
+        display: block;
+        font-size: 18px;
+
+        del {
+            color: $color-body;
+            margin-right: 10px;
+            font-weight: 400;
+        }
+    }
+
+    &:hover &-topside {
+        &::before {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &:hover &-actions {
+        li {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+.tm-ratingbox {
+    font-size: 0;
+
+    span {
+        font-size: 20px;
+        display: inline-block;
+        vertical-align: middle;
+
+        &:not(:last-child) {
+            margin-right: 4px;
+        }
+
+        &.is-active {
+            color: #fdc716;
+        }
+    }
+}

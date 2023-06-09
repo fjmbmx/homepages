@@ -1,0 +1,25 @@
+/**
+ * Video Area
+ */
+
+.tm-video {
+    padding: 240px 0;
+
+    &-area {
+        &::before {
+            background-color: #f1b79e;
+        }
+    }
+
+    @media #{$layout-notebook}{
+        padding: 180px 0;
+    }
+
+    @media #{$layout-tablet}{
+        padding: 150px 0;
+    }
+
+    @media #{$layout-mobile-lg}{
+        padding: 150px 0;
+    }
+}

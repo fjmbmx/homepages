@@ -1,0 +1,65 @@
+/**
+ * About
+ */
+
+.tm-about {
+    &-content {
+        h6 {
+            color: $color-theme;
+            font-weight: 400;
+        }
+
+        h3 {
+            font-weight: 500;
+        }
+
+        .tm-button {
+            margin-top: 23px;
+        }
+    }
+
+    @media #{$layout-tablet} {
+        &-content {
+            margin-top: 40px;
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        &-content {
+            margin-top: 40px;
+        }
+    }
+}
+
+.tm-mission {
+    &-video {
+        position: relative;
+
+        .tm-videobutton {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -40px;
+            margin-left: -40px;
+        }
+    }
+
+    @media #{$layout-tablet} {
+        &-content {
+            margin-top: 40px;
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        &-content {
+            margin-top: 40px;
+        }
+
+        &-video {
+            .tm-videobutton {
+                margin-top: -30px;
+                margin-left: -30px;
+            }
+        }
+    }
+}

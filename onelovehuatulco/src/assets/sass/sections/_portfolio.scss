@@ -1,0 +1,118 @@
+/**
+ * Portfolio
+ */
+
+.tm-portfolio {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(#000000, 0.6);
+        pointer-events: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: $transition;
+    }
+
+    &-icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        background: rgba($color-theme, 0.8);
+        font-size: 20px;
+        line-height: 52px;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        color: #ffffff;
+        border-radius: 100px;
+        border: 1px solid #ffffff;
+        margin-left: -25px;
+        margin-top: -25px;
+        pointer-events: none;
+        transform: translateY(50px);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.4s ease-out 0s;
+        z-index: 1;
+
+        i {
+            line-height: 50px;
+        }
+    }
+
+    &:hover::before {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &:hover &-icon {
+        transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &-filters {
+        border-bottom: 1px solid $color-border;
+        margin-top: -14px;
+
+        button {
+            padding: 0;
+            border: 0;
+            outline: none;
+            height: auto;
+            font-size: 16px;
+            font-weight: 600;
+            color: $color-heading;
+            padding: 10px;
+            margin: 0 5px;
+            position: relative;
+            transition: $transition;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 100%;
+                height: 1px;
+                width: 0;
+                background: $color-theme;
+                transition: $transition;
+            }
+
+            &.is-active {
+                color: $color-theme;
+
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        &-filters {
+            border: 0;
+
+            button {
+                margin: 0;
+                display: block;
+                padding: 10px;
+                padding-left: 0;
+                width: 100%;
+                text-align: left;
+            }
+        }
+    }
+
+    @media #{$layout-mobile-xs} {
+        &-wrapper {
+            padding: 0;
+        }
+    }
+}

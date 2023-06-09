@@ -1,0 +1,71 @@
+/**
+ * Team Member
+ */
+
+.tm-member {
+    &-topside {
+        position: relative;
+        overflow: hidden;
+
+        ul {
+            padding-left: 0;
+            margin-bottom: 0;
+            position: absolute;
+            left: 0;
+            top: auto;
+            bottom: 0;
+            width: 100%;
+            background: rgba($color-theme, 0.8);
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 0;
+            transition: $transition;
+            transform: translateY(100%);
+
+            li {
+                list-style: none;
+                display: inline-block;
+                font-size: 18px;
+                vertical-align: middle;
+                margin: 0 10px;
+
+                a,
+                button {
+                    display: inline-block;
+                    vertical-align: middle;
+                    padding: 2px 5px;
+                    color: #ffffff;
+                    outline: none;
+                    border: none;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    &-bottomside {
+        margin-top: 25px;
+
+        h5 {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+
+        h6 {
+            color: $color-theme;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    &:hover &-topside {
+        ul {
+            transform: translateY(0);
+        }
+    }
+}

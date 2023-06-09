@@ -1,0 +1,50 @@
+/**
+ * Feature
+ */
+
+.tm-feature {
+    box-shadow: $shadow;
+    padding: 50px 30px 25px 30px;
+    background: #ffffff;
+
+    &-area{
+        background-repeat: no-repeat;
+        background-size: initial;
+        background-position: left center;
+    }
+
+
+    &-icon {
+        font-size: 30px;
+        display: inline-block;
+        margin-bottom: 25px;
+    }
+
+    &-content {
+        h6 {
+            font-family: $ff-body;
+            color: $color-theme;
+            font-weight: 700;
+        }
+    }
+
+    &-image {
+        margin-left: -320px;
+    }
+
+    @media #{$layout-notebook}{
+        padding: 50px 20px 25px 20px;
+    }
+
+    @media #{$layout-desktop-xs} {
+        &-image {
+            margin-left: -190px;
+        }
+    }
+
+    @media #{$layout-laptop} {
+        &-image {
+            margin-left: 0;
+        }
+    }
+}
